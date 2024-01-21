@@ -4,6 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "HCI CTP Resources",
   description: "A curated site of resources made by and for the HCI Computing Talent Programme (and IRS/EC^3)",
+	srcDir: "./src",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [
@@ -22,7 +23,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/EC3-Gang/resources' }
     ]
   }
 })

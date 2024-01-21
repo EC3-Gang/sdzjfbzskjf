@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "HCI CTP Resources"
-  text: "A curated site of resources made by and for the HCI Computing Talent Programm"
+  text: "A curated site of resources made by and for the Computing Talent Programme (and EC³)"
   tagline: My great project tagline
   actions:
     - theme: brand
