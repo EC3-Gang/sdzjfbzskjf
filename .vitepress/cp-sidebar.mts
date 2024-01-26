@@ -9,7 +9,6 @@ export default [
 			{ text: 'Greedy Algorithms', link: '/competitive-programming/greedyalgorithms' },
 			{ text: 'Binary Search', link: '/competitive-programming/bs' },
 			{ text: 'Bitmask', link: '/competitive-programming/bitmask' },
-			{ text: 'Meet in the Middle', link: '/competitive-programming/mitm' },
 			{ text: 'Dynamic Programming', link: '/competitive-programming/dp' },
 			{ text: 'Graph Theory', link: '/competitive-programming/gt' },
 			{ text: 'Trees', link: '/competitive-programming/trees' },
