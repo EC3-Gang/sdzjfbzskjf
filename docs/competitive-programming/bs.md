@@ -66,10 +66,6 @@ int binarySearch(int array[], int x, int low, int high) {
 }
 ```
 
-### Recursive method
-
-This uses recursive functions, so you might want to go take a look at [this](/guide/more-adv/rf.md).
-
 Recursion is basically running a code again and again until you get the desired results.
 For example:
 
