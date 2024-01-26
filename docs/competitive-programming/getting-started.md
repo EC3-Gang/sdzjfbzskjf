@@ -14,9 +14,6 @@ You will need to have the following installed on your computer:
 If you do not have any of these installed, please follow the instructions below.
 
 ## Installing C++
-
-<br />
-
 ### Windows
 
 <br />
@@ -147,5 +144,4 @@ Should usually be pre-installed on most systems. If not, refer to your system's 
 
 ## Installing a Terminal
 
-Honestly if you need this you need some help
-
+Honestly if you need this you need some help.
