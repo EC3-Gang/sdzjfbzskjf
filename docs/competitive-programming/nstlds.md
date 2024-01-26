@@ -24,7 +24,11 @@ Fenwick tree supports point update and range update :)
 
 A Fenwick Tree is also called a binary-indexed tree.
 
-So how a Fenwick Tree works is it covers ranges in the array *binarily* (i made that up)
+So how a Fenwick Tree works is:
+
+1. Every node covers a certain range and will store data within that range
+2. Each node is given a unique index $i$
+3. To go from one node to the other, one can simply subtract the least significant bit (LSB) of the index of the current node
 
 Imagine a tree, but the parent node spans from the leftmost node to the middle node.
 Then, the 2 nodes after that spans half as much as the first one
