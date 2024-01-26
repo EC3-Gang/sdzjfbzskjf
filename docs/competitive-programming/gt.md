@@ -69,13 +69,15 @@ Go wide.
 Time complexity: O(V+E) (adjlist), O(V^2) (adjmatrix)
 
 ```cpp
-queue<pair<int, int>> q;
-q.push({0, 0});
+queue<int> q;
+q.push(0);
 while (!q.empty()) {
-  auto cur = q.top();
+  auto curnode = q.top() ;
   q.pop();
   // cur will be the node you are traversing right now
-  q.push(adjlist[cur.first][cur.second]);
+  for(int it : adjlist[curnode]){
+    q.push({it});
+  }
 }
 ```
 
@@ -211,7 +213,7 @@ while (l < k && cnt < n - 1) {
 }
 ```
 
-If you found anything familar here good for you becuse find and merge are both from UFDS. Now you need to code a UFDS to do this :)
+If you found anything familar here good for you because find and merge are both from UFDS. Now you need to code a UFDS to do this :)
 
 Another thing you may have noticed is the edge list. Use it for MST ONLY.
 

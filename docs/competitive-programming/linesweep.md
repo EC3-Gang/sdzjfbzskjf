@@ -6,46 +6,48 @@ title: Two pointers
 
 # Line sweep/sliding window
 
-## explanation
+## line sweep explanation
 
-i dont even know in which situation you need this BUT YOU DO OKAY
+Sometimes the problem can be solved faster using line sweep.
+You can imagine a line sweeping from left to right/up to down and doing something to everything it meets along the way.
 
-Yes theres steps too.
+Example problem [this](https://codebreaker.xyz/problem/globalwarming)
+To solve this problem, we can using line sweep.
 
-1.  Make 2 pointers, left and right
-2.  assign each of them to index 0 and index n-1
-3.  if arr\[left] (> or <) arr\[right] do smth
+1. Sweep from tallest islands to shortest islands.
+2. When reaching an island, check its neighbouring 2 islands
+3. If both are taller, subtract 1 from the answer
+4. If only 1 is taller, do nothing
+5. If both are shorter, add 1 to the answer
+
+The answer is the maximum out of all iterations
 
 heres a piece of code demonstrating this:
 
 ```cpp
-#include <bits/stdc++.h>
-using namespace std;
-int main() {
-  int n, s;
-  cin >> n >> s;
-  int a[n];
-  long long sum = 0;
-  for (int i = 0; i < n; ++i) {
-    cin >> a[i];
-    sum += a[i];
+  sort(arr,arr+n,greater<pii>());
+  int ans=0;
+  int cnt=0;
+  last=-1;
+  int i=0;
+  while(i<n){
+    if(arr[i].first!=last){
+      last=arr[i].first;
+      ans=max(ans,cnt);
+    }
+    int index=arr[i].second;
+    if(index==0){
+      if(a[index+1]<a[index]) cnt++;
+    }
+    else if(index==n-1){
+      if(a[index-1]<a[index]) cnt++;
+    }
+    else{
+      if(a[index+1]<a[index] && a[index-1]<a[index]) cnt++;
+      else if(a[index+1]>a[index] && a[index-1]>a[index]) cnt--;
+    }
+    i++;
   }
-  int left = 0, right = n - 1;
-  int maxi = 0;
-  while (right - left != 0) {
-    if (sum <= s)
-      maxi = max(maxi, right - left + 1);
-    if (a[left] < a[right]) {
-      sum -= a[right];
-      right--;
-    } else if (a[right] < a[left]) {
-      sum -= a[left];
-      left++;
-    } else
-      left++;
-  }
-  cout << maxi;
-}
+  ans=max(ans,cnt);
+  cout<<ans;
 ```
-
-note that this is not the answer to [catfight](https://codebreaker.xyz/problem/catfight) as this only works for the sample test case
