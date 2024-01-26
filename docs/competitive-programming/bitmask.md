@@ -8,7 +8,7 @@ Let's look at an example problem
 
 ## Example Problem
 
-You are given a set of integers $S$, of size $N$. You want to find the maximum sum of elements of a subset of $S$, if the sum has to be $<K$ for a given value $K$.
+You are given a set of integers $S$, of size $N$. You want to find the maximum sum of elements of a subset of $S$, if the sum has to be $&lt;K$ for a given value $K$.
 
 We can solve this problem by brute forcing all possible subsets. However, you might notice that you would need $N$ for loops, which is questionable at best.
 
