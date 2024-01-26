@@ -11,7 +11,7 @@ export default [
 			{ text: 'Bitmask', link: '/competitive-programming/bitmask' },
 			{ text: 'Dynamic Programming', link: '/competitive-programming/dp' },
 			{ text: 'Graph Theory', link: '/competitive-programming/gt' },
-			{ text: 'Trees', link: '/competitive-programming/trees' },
+			{ text: 'Non-STL Data Structures', link: '/competitive-programming/nstlds' },
 			{ text: 'Line Sweep', link: '/competitive-programming/linesweep' },
 		],
 	}
